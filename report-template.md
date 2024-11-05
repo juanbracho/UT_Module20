@@ -56,14 +56,31 @@ Logistic Regression was chosen for its simplicity, interpretability, and efficie
 
 Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+* Machine Learning Model 1: Logistic Regression\
+    * Accuracy: 99% — The model correctly classified both healthy and high-risk loans in 99% of cases.
+    * Precision:
+        * Class 0 (Healthy Loan): 1.00 — All loans predicted as healthy were actually healthy.
+        * Class 1 (High-Risk Loan): 0.84 — 84% of loans predicted as high-risk were indeed high-risk.
+    * Recall:
+        * Class 0 (Healthy Loan): 0.99 — The model successfully identified 99% of all healthy loans.
+        * Class 1 (High-Risk Loan): 0.94 — The model captured 94% of all actual high-risk loans, effectively identifying most high-risk cases.
+
+These metrics indicate that the Logistic Regression model is highly accurate and performs well in predicting both classes, with especially high recall for high-risk loans, making it valuable for managing credit risk.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. 
 
 If you do not recommend any of the models, please justify your reasoning.
+
+The Machine Learning Model demonstrates strong overall performance with high accuracy, precision, and recall. Based on the evaluation metrics, this model effectively distinguishes between healthy and high-risk loans, making it a suitable choice for the company’s needs.
+
+* Performance Summary:
+    * The model achieved 99% accuracy, indicating that it correctly classified loans in nearly all cases.
+    * For healthy loans (Class 0), it demonstrated perfect precision (1.00) and high recall (0.99), meaning it accurately identifies and correctly labels most healthy loans.
+    * For high-risk loans (Class 1), it achieved a precision of 0.84 and a recall of 0.94, showing it effectively identifies the majority of high-risk cases while maintaining a reasonable level of precision.
+* Recommendation:
+    * This model is recommended for deployment due to its ability to effectively identify high-risk loans (Class 1) with a high recall score. In the context of credit risk management, identifying high-risk loans is crucial to minimize potential financial losses. The high recall for high-risk loans ensures that most risky applicants are flagged, reducing the chance of issuing loans to potentially defaulting borrowers.
+    * The slight trade-off in precision for high-risk loans (0.84) is acceptable within this context, as the model’s primary goal is to identify as many high-risk loans as possible. This approach prioritizes caution, even if some healthy loans are occasionally classified as high-risk.
+
+In summary, the Logistic Regression model is recommended due to its high accuracy, especially in identifying high-risk loans, making it a valuable tool for improving the company's credit risk management strategy.
